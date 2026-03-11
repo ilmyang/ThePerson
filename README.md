@@ -58,7 +58,8 @@ This project is licensed under the [MIT License](LICENSE.txt).
 
 ---
 
-Like my project? [Drop me a star][repo]!
+Please [drop me a star][repo] to ensure this reaches as many devs as 
+possible 🙏 (PLEASE 🙏🙏🙏)
 
 [repo]: https://github.com/TheGittyPerson/ThePerson
 [repo-disc]: https://github.com/TheGittyPerson/ThePerson/discussions
