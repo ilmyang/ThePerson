@@ -1,6 +1,9 @@
+Hello! You're about to make a pull request.
+
 ### 📋 Select a Template
 
-1. On the "Open a pull request" page, switch to Preview mode.
+On the "Open a pull request" page (where you are right now):
+1. Switch to the Preview tab.
 2. Click one of the links below to load the correct template for your PR:
 
    - [📋 Completed Task Template](?template=COMPLETED-TASK.md)

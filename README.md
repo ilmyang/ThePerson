@@ -37,6 +37,11 @@ If you are interested in completing a task:
 - Give [CONTRIBUTING](.github/CONTRIBUTING.md) a read
 - Start coding!
 
+#### Note:
+Each task issue is labeled with its approximate difficulty level; to ensure 
+fair distribution of tasks amongst contributors, **please try to complete tasks 
+labeled with your level of coding experience only**
+
 ## 💻 How to use
 
 To try using the project yourself on your computer, follow these steps.
@@ -58,7 +63,8 @@ This project is licensed under the [MIT License](LICENSE.txt).
 
 ---
 
-Like my project? [Drop me a star][repo]!
+Please [drop me a star][repo] to ensure this reaches as many devs as 
+possible 🙏 (PLEASE 🙏🙏🙏)
 
 [repo]: https://github.com/TheGittyPerson/ThePerson
 [repo-disc]: https://github.com/TheGittyPerson/ThePerson/discussions

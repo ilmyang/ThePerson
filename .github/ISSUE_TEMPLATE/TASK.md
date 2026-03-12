@@ -14,14 +14,14 @@ labels: ['good first issue', 'help wanted', task]
 ### PR steps:
 1. Fork this repo
 2. Clone the forked repo
-3. **Create a new branch**: name the branch `category/branch-name`
-4. Push commits to remote
-5. Create a PR titled `TASK: TaskTitleHere (#IssueNumberHere)`
-6. At the end of the PR description, add `Closes #IssueNumberHere`
+3. **Create a new branch**: name the branch `CATEGORY/BRANCHNAME`
+4. Push commits to your remote fork
+5. Create a PR titled `TASK: TASKTITLEHERE (#ISSUENUMBERHERE)`
+6. At the end of the PR description, add `Closes #ISSUENUMBERHERE`
 7. Submit the PR (Ensure you enable write access for code owners)
 8. _Optional: Request a review from a code owner_
 
-Read [CONTRIBUTING][contributing] for more details.
+Please make sure you have read [CONTRIBUTING][contributing] before working.
 
 Feel free to ask any questions here.
 **Leave a comment** if you wish to work on this task!
