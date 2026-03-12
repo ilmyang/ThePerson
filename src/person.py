@@ -100,7 +100,8 @@ class Person:
         today = datetime.today()
         if target is not None:
             default_message = (
-                message or f"Happy {day.capitalize()}, {target.name}! \U0001f389"
+                message or f"Happy {day.capitalize()}, {target.name}! "
+                           f"\U0001f389"
             )
             unknown_message = f"I don't know {target.name}'s {day}..."
             not_today_message = (
@@ -128,3 +129,4 @@ class Person:
                 self.say(not_today_message)
         else:
             self.say(default_message)
+    
