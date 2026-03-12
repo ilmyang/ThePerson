@@ -1,10 +1,14 @@
+from __future__ import annotations
+
 from typing import TextIO
 from datetime import date
+
+from mood import Mood
 
 
 class Person:
     """A class to represent a person."""
-    
+
     def __init__(self,
                  name: str | None = None,
                  age: int | None = None,
@@ -27,6 +31,7 @@ class Person:
         self.married_date = married_date
         self.graduation_date = graduation_date
         self.death_date = death_date
+        self.mood = Mood()
 
     def greet(self) -> None:
         """Do a simple greeting and introduction."""
@@ -128,4 +133,3 @@ class Person:
                 self.say(not_today_message)
         else:
             self.say(default_message)
-    
