@@ -23,6 +23,7 @@ these contribution guidelines.
   - [⚠️ THINGS TO KEEP IN MIND](#-things-to-keep-in-mind)
 - [📋 Task Issues](#-task-issues)
 - [🧑‍💻 Code Guidelines](#-code-guidelines)
+- [🏡 The Town](#-the-town)
 - [🤖 AI-Assisted Contributions](#-ai-assisted-contributions)
 - [🧰 Making Your First Contribution](#-making-your-first-contribution)
 
@@ -217,6 +218,30 @@ never think of.
 
 Give your code some _personality_. Avoid dull, flavorless code. You can even 
 add a little joke comment if your code starts to look sleep-inducing.
+
+## 🏡 The Town
+
+In the root directory of this repo, you will see `the_town.py`. Add yourself 
+as a `Person` instance to be part of the town!
+
+Pull request steps:
+1. Fork and clone this repository
+2. **Create a new branch** using the special prefix `town`. Name the branch 
+   `town/add-yourname`.
+    - Replace `yourname` with your name, e.g. `town/add-morpheus`
+3. Commit your changes and push to your remote fork.
+4. Open a pull request
+5. Await approval
+
+You can also open a PR to update, change, or remove any of the code **you** 
+added previously.
+
+### 📜 Town Laws:
+- Only edit your own code, even if you see a mistake someone made. That's their 
+  job to fix it.
+- Don't change, add, or remove other townsfolk's attributes or called methods.
+- Don't kill your neighbors (Don't remove `Person` instances other than your 
+  own)
 
 ## 🤖 AI-Assisted Contributions
 
