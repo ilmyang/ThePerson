@@ -8,7 +8,7 @@ from mood import Mood
 
 class Person:
     """A class to represent a person."""
-
+    
     def __init__(self,
                  name: str | None = None,
                  age: int | None = None,
@@ -45,6 +45,14 @@ class Person:
             flush: bool = False) -> None:
         """Say a word, phrase, sentence or paragraph."""
         print(*args, sep=sep, end=end, file=file, flush=flush)
+
+    @staticmethod
+    def wave() -> None:
+        """Wave a hand to greet or bid farewell.
+
+        This method prints a waving hand emoji to represent a wave.
+        """
+        print("\U0001f44b")  # Unicode for waving hand emoji
 
     def introduce(self) -> None:
         """Print a full self-introduction using the person's attributes."""
@@ -133,4 +141,3 @@ class Person:
                 self.say(not_today_message)
         else:
             self.say(default_message)
-    
