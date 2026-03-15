@@ -61,7 +61,7 @@ class Goals:
 
     def __init__(self) -> None:
         """Initialise with an empty goals list."""
-        self.goals: list[Goal] = []
+        self.list: list[Goal] = []
 
     def add_goal(self, name: str, description: str = "") -> Goal:
         """Add a new goal.
@@ -76,10 +76,12 @@ class Goals:
         Returns:
             The newly created Goal.
         """
-        if any(g.name.lower() == name.strip().lower() for g in self.goals):
+        if not isinstance(name, str):
+            raise TypeError(f"Goal name must be a string, got {type(name).__name__}.")
+        if any(g.name.lower() == name.strip().lower() for g in self.list):
             raise ValueError(f"Goal '{name}' already exists.")
         goal = Goal(name, description)
-        self.goals.append(goal)
+        self.list.append(goal)
         return goal
 
     def remove_goal(self, name: str) -> None:
@@ -92,7 +94,7 @@ class Goals:
             ValueError: If no goal with that name exists.
         """
         goal = self._find_goal(name)
-        self.goals.remove(goal)
+        self.list.remove(goal)
 
     def complete_goal(self, name: str) -> None:
         """Mark a goal as completed.
@@ -111,7 +113,7 @@ class Goals:
         Returns:
             List of Goal objects that are not yet completed.
         """
-        return [g for g in self.goals if not g.completed]
+        return [g for g in self.list if not g.completed]
 
     def completed_goals(self) -> list[Goal]:
         """Return a list of completed goals.
@@ -119,7 +121,7 @@ class Goals:
         Returns:
             List of Goal objects that are completed.
         """
-        return [g for g in self.goals if g.completed]
+        return [g for g in self.list if g.completed]
 
     def is_goalless(self) -> bool:
         """Return True if there are no goals.
@@ -127,7 +129,7 @@ class Goals:
         Returns:
             True if the goals list is empty.
         """
-        return len(self.goals) == 0
+        return len(self.list) == 0
 
     def summary(self) -> str:
         """Return a summary of all goals.
@@ -137,7 +139,7 @@ class Goals:
         """
         if self.is_goalless():
             return "No goals set."
-        return "\n".join(str(g) for g in self.goals)
+        return "\n".join(str(g) for g in self.list)
 
     def _find_goal(self, name: str) -> Goal:
         """Find a goal by name.
@@ -151,7 +153,9 @@ class Goals:
         Returns:
             The matching Goal object.
         """
-        for goal in self.goals:
+        if not isinstance(name, str):
+            raise TypeError(f"Goal name must be a string, got {type(name).__name__}.")
+        for goal in self.list:
             if goal.name.lower() == name.strip().lower():
                 return goal
         raise ValueError(f"Goal '{name}' not found.")
@@ -162,4 +166,4 @@ class Goals:
 
     def __repr__(self) -> str:
         """Return a detailed representation of the goals collection."""
-        return f"Goals(goals={self.goals!r})"
+        return f"Goals(goals={self.list!r})"
