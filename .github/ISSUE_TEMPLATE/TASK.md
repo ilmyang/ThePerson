@@ -21,7 +21,7 @@ labels: ['good first issue', 'help wanted', task]
 7. Submit the PR (Ensure you allow maintainers to edit)
 8. _Optional: Request a review from a code owner_
 
-Please make sure you have read the [Contribution Guidelines][contrib] before 
+Please make sure you have read the [Contributing Guidelines][contrib] before 
 working.
 
 Feel free to ask any questions here.

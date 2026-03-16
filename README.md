@@ -26,7 +26,7 @@ creativity. We also aim to keep our community safe and engaging for everyone.
 - **Be Part of The Town**: _The Town_ is a fun little community that anyone 
   can join. Read [the section below](#-be-part-of-the-town) to find out more.
 
-Read our [Contribution Guidelines][contrib] to get started.
+Read our [Contributing Guidelines][contrib] to get started.
 
 ## 📋 Completing Tasks
 
@@ -37,7 +37,7 @@ instructions and more guidance.
 If you are interested in completing a task: 
 - **Leave a comment requesting assignment under the issue**.
 - Wait for a thumbs-up from a maintainer
-- Give our [Contribution Guidelines][contrib] a read
+- Give our [Contributing Guidelines][contrib] a read
 - Start coding!
 
 #### Note:
@@ -83,7 +83,7 @@ may be **closed without merging**.
 
 If you used AI assistance, please disclose it briefly in your PR description.
 
-Please read the [Contribution Guidelines][contrib] for more information.
+Please read the [Contributing Guidelines][contrib] for more information.
 
 ## 💻 How to use
 
