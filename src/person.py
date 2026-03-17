@@ -1,3 +1,5 @@
+"""✨ The ultimate centerpiece; contains the Person class."""
+
 from __future__ import annotations
 
 from typing import TextIO
