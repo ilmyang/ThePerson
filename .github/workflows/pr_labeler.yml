@@ -2,13 +2,14 @@ name: PR Labeler
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, edited]
 
 jobs:
   label_task:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+      issues: write  # Just in case creating labels requires this
       contents: read
     steps:
       - uses: actions/github-script@v7
