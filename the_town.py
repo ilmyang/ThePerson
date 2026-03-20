@@ -1,6 +1,6 @@
 """Add yourself as a Person instance here!"""
 
-from theperson.person import *
+from theperson.person import Person, Profile, Professional
 
 
 if __name__ == "__main__":

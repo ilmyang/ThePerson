@@ -10,8 +10,6 @@ from dataclasses import dataclass, field
 from .goals import Goals
 from .mood import Mood
 
-__all__ = ["Profile", "Physical", "Professional", "LifeDates", "Person"]
-
 
 @dataclass
 class Profile:
@@ -167,7 +165,7 @@ class Person:
         person = target if target is not None else self
         attr = f"{day}_date"
         
-        if not hasattr(person, attr):
+        if not hasattr(person.life_dates, attr):
             raise AttributeError(
                 f"'{day}' is not a recognised celebration "
                 f"(could not find attribute '{attr}')"
