@@ -189,8 +189,8 @@ class Person:
             )
             unknown_message = f"I don't know {target.profile.name}'s {day}..."
             not_today_message = (
-                f"Today is not {target.profile.name}'s {day} yet, but it's coming "
-                f"soon!"
+                f"Today is not {target.profile.name}'s {day} yet, but it's "
+                f"coming soon!"
             )
         else:
             default_message = (
