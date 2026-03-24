@@ -1,6 +1,8 @@
-# The Person 🧍
+<h1>
+  <img src="assets/images/repo_card_v2.png" alt="repo-card-v2" align="center">
+</h1>
 
-*The Person* is an open-source Python simulation of a person living 
+**The Person is an open-source Python simulation of a person** living 
 inside your computer. It features a central `Person` class that developers 
 can expand with new attributes, behaviors, and quirks.
 
@@ -9,9 +11,9 @@ can expand with new attributes, behaviors, and quirks.
 necessary, but try to keep the main focus on `Person`.
 
 Our goal is to simulate a human in Python as closely as possible (and create 
-a super long script) while providing a learning opportunity for beginners 
-and a fun activity for experienced devs, and spark imagination and 
-creativity. We also aim to keep our community safe and engaging for everyone.
+a super long script) while providing a **learning opportunity** for beginners 
+and a fun activity for experienced devs, and **spark imagination and 
+creativity**. We also aim to keep our community safe and engaging for everyone.
 
 ---
 
