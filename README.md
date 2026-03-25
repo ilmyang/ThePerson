@@ -20,11 +20,11 @@ inside your computer. It features a central `Person` class that developers
 can expand with new attributes, behaviors, and quirks.
 
 `theperson/person.py` is the heart of the project. Inside the script is a 
-`Person` class where you can build in. You may add other classes if 
-necessary, but try to keep the main focus on `Person`.
+`Person` class where you can build in. You may add other classes and modules 
+to further expand and improve the project.
 
-Our goal is to simulate a human in Python as closely as possible (and create 
-a super long script) while providing a **learning opportunity** for beginners 
+Our goal is to simulate a human in Python with plenty of features (and create a 
+super long script) while providing a **learning opportunity** for beginners 
 and a fun activity for experienced devs, and **spark imagination and 
 creativity**. We also aim to keep our community safe and engaging for everyone.
 
