@@ -2,6 +2,19 @@
   <img src="assets/images/repo_card_v2.png" alt="repo-card-v2" align="center">
 </h1>
 
+![Stars](https://img.shields.io/github/stars/TheGittyPerson/ThePerson)
+![Forks](https://img.shields.io/github/forks/TheGittyPerson/ThePerson)
+![Watchers](https://img.shields.io/github/watchers/TheGittyPerson/ThePerson)
+![Contributors](https://img.shields.io/github/contributors-anon/TheGittyPerson/ThePerson)
+![Issues](https://img.shields.io/github/issues/TheGittyPerson/ThePerson)
+![Commit activity](https://img.shields.io/github/commit-activity/m/TheGittyPerson/ThePerson)
+
+![Top language](https://img.shields.io/github/languages/top/TheGittyPerson/ThePerson)
+![Open-Source](https://img.shields.io/badge/open-source-blue)
+![Code size in bytes](https://img.shields.io/github/languages/code-size/TheGittyPerson/ThePerson)
+![Branch Status](https://img.shields.io/github/checks-status/TheGittyPerson/ThePerson/main)
+![License](https://img.shields.io/github/license/TheGittyPerson/ThePerson)
+
 **The Person is an open-source Python simulation of a person** living 
 inside your computer. It features a central `Person` class that developers 
 can expand with new attributes, behaviors, and quirks.
