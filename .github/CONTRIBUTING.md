@@ -1,6 +1,8 @@
-# Contributing to this project
+# Contributing Guidelines
 
-## 👋 Hello!
+###### How to Contribute to _ThePerson_
+
+## 👋 Greetings!
 
 Thanks for considering contributing to this open-source project! Both beginners 
 and experts are very welcome here.
@@ -9,7 +11,8 @@ This project is purely for entertainment purposes, so _do_ have fun and let
 your creativity flow.
 
 If you want to contribute to The Person, I recommend you take the time to read 
-these contributing guidelines, or at least skim through it.
+these contributing guidelines, or at least skim through it to get an idea of 
+how to make good contributions.
 
 ---
 
@@ -32,10 +35,20 @@ these contributing guidelines, or at least skim through it.
 
 ## ✨ Contributions You Can Make
 
-There are many ways you can contribute: Adding a feature, fixing code, 
-finding and reporting bugs, improving documentation, and more!
+There are many ways you can contribute: 
+- [Suggesting or adding a feature](#-suggesting-features)
+- [Finding and reporting bugs](#-reporting-bugs)
+- Reformatting, refactoring, or enhancing code
+- Improving documentation
+- [Completing tasks](#-task-issues)
+- [Joining The Town](#-the-town)
+- [Participating in discussions][repo-disc]
+- Helping to review or give feedback to pull requests or issues
+- Suggesting task issues (by opening a discussion)
+- ...and more!
 
-Any addition to the project will be very much appreciated, even small ones.
+Any addition to the project will be very much appreciated, even small or minor 
+ones.
 
 [^ TOC](#-table-of-contents)
 
