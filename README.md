@@ -89,20 +89,23 @@ assistance in code reviews, all comments, review messages, task issues, and
 documentation are written by human hands, ensuring any AI assistance is 
 **thoroughly reviewed and understood**.
 
-We expect the same from contributors and **discourage using AI as more than 
-just a tool**.(Read our [Code of Conduct][coc])
+We expect the same from contributors and **discourage using AI for 
+contributions, especially for writing large amounts of code**.(Read our 
+[Code of Conduct][coc])
 
 AI tools can be helpful during development, and contributors are allowed to use
-them as **assistive tools**. However, this project does **not accept fully 
-automated or mass-generated contributions**.
+them solely as **assistive tools or translators**. However, this project does 
+**not accept contributions that are noticeably AI-generated with minimal 
+human work**.
 
 Pull requests that appear to be:
-- fully AI-generated,
-- automatically submitted to many repositories,
+- primarily AI-generated,
+- created by a bot/automated account,
 - or lacking human oversight
 may be **closed without merging**.
 
-If you used AI assistance, please disclose it briefly in your PR description.
+Just so you know, it is quite easy to tell AI-generated code apart from 
+human-writen code.
 
 Please read the [Contributing Guidelines][contrib] for more information.
 

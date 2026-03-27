@@ -296,26 +296,24 @@ added previously.
 
 ## 🤖 AI-Assisted Contributions
 
-AI tools can be helpful during development, and contributors are allowed to use 
-them as **assistive tools**. However, this project does **not accept fully 
-automated or mass-generated contributions**.
+AI tools can be helpful during development, and contributors are allowed to use
+them as **assistive tools**. However, this project does **not accept 
+contributions that are noticeably and mostly AI-generated**.
 
 When submitting a pull request:
 - **A human must be responsible** for the work submitted.
 - **You must personally review, understand, and test** any code you submit.
-- AI may be used for **suggestions, debugging help, or small improvements**, 
-  but not for generating entire pull requests automatically.
-- **Bulk or automated PRs created by bots or scripts are not accepted**.
 - Contributors must be able to **explain their changes and respond to review 
   feedback**.
 
-Pull requests and issues that appear to be:
-- fully AI-generated, 
-- automatically submitted to many repositories,
+Pull requests that appear to be:
+- primarily AI-generated,
+- created by a bot/automated account,
 - or lacking human oversight
 may be **closed without merging**.
 
-If you used AI assistance, please disclose it briefly in your PR description.
+Just so you know, it is quite easy to tell AI-generated code apart from 
+human-writen code.
 
 [^ TOC](#-table-of-contents)
 
