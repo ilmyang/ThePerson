@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import random
+import time
 from typing import TextIO
 from datetime import date
 from dataclasses import dataclass, field
+
 
 from .goals import Goals
 from .mood import Mood
@@ -229,3 +231,46 @@ class Person:
         ]
 
         self.say(random.choice(messages))
+
+    def do_tasks(self,
+                 task: str | None = None,
+                 tasks: list[str] | None = None,
+                 delay: int = 1,
+                 delays: list[int] | None = None) -> None:
+        """Work on the given tasks.
+        Args:
+            task: A single task e.g. Fix Bugs.
+            tasks: Multiple tasks e.g. Write report, Fix Bugs, and Attend the meeting.
+            delay: Delay to complete the task.
+            delays: Delay to complete each task in tasks.
+
+        Raises:
+            ValueError: if the length of tasks and delays are not the same,
+             and if the parameters task and tasks are both provided
+        """
+        
+        if tasks and delays and len(tasks) != len(delays):
+            raise ValueError("Tasks and delays must have the same length.")
+
+        if task and tasks:
+            raise ValueError("Provide either 'task' or 'tasks', not both.")
+
+        if task:
+            print(f"{self.profile.name} is working on the task: {task}.")
+            time.sleep(delay)
+            print(f"{self.profile.name} has successfully completed the tasks: {task}")
+        elif tasks:
+            print(f"{self.profile.name} is currently completing the following tasks:")
+            for index in range(len(tasks)):
+                print(f"• {tasks[index]}...")
+                if delays:
+                    time.sleep(delays[index])
+            print(f"All assigned tasks for {self.profile.name} have been successully completed.")
+        else:
+            print(f"No tasks were provided for {self.profile.name}")
+
+
+
+
+
+
