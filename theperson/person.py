@@ -235,35 +235,47 @@ class Person:
                  tasks: str | list[str],
                  durations: float | list[float]) -> None:
         """Work on the given tasks.
+        
+        The number of tasks should match the number of durations provided.
+        Each duration is mapped to each corresponding task. If multiple
+        tasks are given but only one duration is provided, the duration will
+        be assigned to all tasks.
+        
         Args:
-            tasks: List of tasks to work on.
-            durations: Duration to complete each task in tasks.
+            tasks (str | list[str]):
+                List of tasks to work on. A string may be used if only
+                one task is to be provided.
+            durations (float | list[float]):
+                Duration in seconds to complete each task.
 
         Raises:
-            TypeError: if tasks is not a string or list of strings,
-                or if durations is not a float or list of floats.
-            ValueError: if the number of tasks and durations do not match
+            TypeError:
+                If 'tasks' is not a str or a list of strings,
+                or if 'durations' is not a float or list of floats.
+            ValueError:
+                If the number of tasks does not match the number of durations.
+                (except if len(durations)==1)
         """
         
         if isinstance(tasks, str):
             tasks = [tasks]
         elif not isinstance(tasks, list):
-            raise TypeError("Tasks must be a string or a list of strings.")
+            raise TypeError("'tasks' must be a string or a list of strings")
         
         if not all(isinstance(task, str) for task in tasks):
-            raise TypeError("All tasks must be strings.")
+            raise TypeError("All tasks must be strings")
 
         if isinstance(durations, float):
             durations = [durations] * len(tasks)
         elif not isinstance(durations, list):
-            raise TypeError("Durations must be a float or a list of floats.")
+            raise TypeError("'durations' must be a float or a list of floats")
         
         if not all(isinstance(duration, float) for duration in durations):
-            raise TypeError("All durations must be float.")
+            raise TypeError("All 'durations' must be a float")
         
         if len(tasks) != len(durations):
             raise ValueError(
-                "The number of tasks and durations must match."
+                "The number of tasks and durations must match"
             )
         
         if len(tasks) == 0:
