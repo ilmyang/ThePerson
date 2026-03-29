@@ -232,38 +232,32 @@ class Person:
         self.say(random.choice(messages))
 
     def do_tasks(self,
-                 task: str | None = None,
-                 tasks: list[str] | None = None,
-                 delay: int = 1,
-                 delays: list[int] | None = None) -> None:
+                 tasks: str | list[str],
+                 durations: float | list[float]) -> None:
         """Work on the given tasks.
         Args:
-            task: A single task e.g. Fix Bugs.
-            tasks: Multiple tasks e.g. Write report, Fix Bugs, and Attend the meeting.
-            delay: Delay to complete the task.
+            tasks: Tasks to work on e.g. Write report, Fix Bugs, and Attend the meeting.
             delays: Delay to complete each task in tasks.
 
         Raises:
-            ValueError: if the length of tasks and delays are not the same,
-             and if the parameters task and tasks are both provided
+            ValueError: if tasks is list and the delays is float instead of list of float.
         """
         
-        if tasks and delays and len(tasks) != len(delays):
-            raise ValueError("Tasks and delays must have the same length.")
+        if isinstance(tasks, str):
+            print(f"{self.profile.name} is working on task: {tasks}.")
+            if isinstance(durations, float):
+                time.sleep(durations)
+            print(f"{self.person.name} completed the task: {tasks}")
 
-        if task and tasks:
-            raise ValueError("Provide either 'task' or 'tasks', not both.")
-
-        if task:
-            print(f"{self.profile.name} is working on the task: {task}.")
-            time.sleep(delay)
-            print(f"{self.profile.name} has successfully completed the tasks: {task}")
-        elif tasks:
-            print(f"{self.profile.name} is currently completing the following tasks:")
-            for index in range(len(tasks)):
-                print(f"• {tasks[index]}...")
-                if delays:
-                    time.sleep(delays[index])
-            print(f"All assigned tasks for {self.profile.name} have been successully completed.")
         else:
-            print(f"No tasks were provided for {self.profile.name}")
+            if isinstance(durations, float):
+                raise ValueError("Provided a list of tasks, delays should be a list.")
+
+            print("Tasks to complete: ")
+
+            tasks_map = dict(zip(tasks, durations))
+            for task, delay in tasks_map.items():
+                print(f"• {task}...")
+                time.sleep(delay)
+
+            print(f"{self.profile.name} has successsfully completed all the tasks.")
