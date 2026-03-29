@@ -245,20 +245,22 @@ class Person:
             ValueError: if the number of tasks and durations do not match
         """
         
+        if isinstance(tasks, str):
+            tasks = [tasks]
+        elif not isinstance(tasks, list):
+            raise TypeError("Tasks must be a string or a list of strings.")
+        
         if not all(isinstance(task, str) for task in tasks):
             raise TypeError("All tasks must be strings.")
-        elif isinstance(tasks, str):
-            tasks = [tasks]
-        else:
-            raise TypeError("Tasks must be a string or a list of strings.")
 
+        if isinstance(durations, float):
+            durations = [durations] * len(tasks)
+        elif not isinstance(durations, list):
+            raise TypeError("Durations must be a float or a list of floats.")
+        
         if not all(isinstance(duration, float) for duration in durations):
             raise TypeError("All durations must be float.")
-        elif isinstance(durations, float):
-            durations = [durations] * len(tasks)
-        else:
-            raise TypeError("Durations must be a float or a list of floats.")
-
+        
         if len(tasks) != len(durations):
             raise ValueError(
                 "The number of tasks and durations must match."
