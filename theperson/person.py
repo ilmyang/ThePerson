@@ -240,26 +240,39 @@ class Person:
             durations: Duration to complete each task in tasks.
 
         Raises:
-            ValueError: if tasks is list and durations is float.
+            TypeError: if tasks is not a string or list of strings,
+                or if durations is not a float or list of floats.
+            ValueError: if the number of tasks and durations do not match
         """
         
-        if isinstance(tasks, str):
-            print(f"{self.profile.name} is working on task: {tasks}.")
-            if isinstance(durations, float):
-                time.sleep(durations)
-            print(f"{self.profile.name} completed the task: {tasks}")
-
+        if not all(isinstance(task, str) for task in tasks):
+            raise TypeError("All tasks must be strings.")
+        elif isinstance(tasks, str):
+            tasks = [tasks]
         else:
-            if isinstance(durations, float):
-                raise ValueError(
-                    "Provided a list of tasks, delays should be a list."
-                )
+            raise TypeError("Tasks must be a string or a list of strings.")
 
-            print("Tasks to complete: ")
+        if not all(isinstance(duration, float) for duration in durations):
+            raise TypeError("All durations must be float.")
+        elif isinstance(durations, float):
+            durations = [durations] * len(tasks)
+        else:
+            raise TypeError("Durations must be a float or a list of floats.")
 
-            tasks_map = dict(zip(tasks, durations))
-            for task, delay in tasks_map.items():
-                print(f"• {task}...")
-                time.sleep(delay)
+        if len(tasks) != len(durations):
+            raise ValueError(
+                "The number of tasks and durations must match."
+            )
+        
+        if len(tasks) == 0:
+            self.say("No tasks provided.")
+            return
 
-            print(f"{self.profile.name} has completed all the tasks.")
+        self.say("Tasks to complete: ")
+
+        tasks_map = dict(zip(tasks, durations))
+        for task, delay in tasks_map.items():
+            self.say(f"• {task}...")
+            time.sleep(delay)
+
+        self.say(f"{self.profile.name} has completed all the tasks.")
