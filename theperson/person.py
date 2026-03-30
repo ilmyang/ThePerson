@@ -230,17 +230,17 @@ class Person:
         ]
 
         self.say(random.choice(messages))
-
+    
     def do_tasks(self,
                  tasks: str | list[str],
                  durations: float | list[float]) -> None:
         """Work on the given tasks.
-        
+
         The number of tasks should match the number of durations provided.
         Each duration is mapped to each corresponding task. If multiple
         tasks are given but only one duration is provided, the duration will
         be assigned to all tasks.
-        
+
         Args:
             tasks (str | list[str]):
                 List of tasks to work on. A string may be used if only
@@ -264,7 +264,7 @@ class Person:
         
         if not all(isinstance(task, str) for task in tasks):
             raise TypeError("All tasks must be strings")
-
+        
         if isinstance(durations, float):
             durations = [durations] * len(tasks)
         elif not isinstance(durations, list):
@@ -287,7 +287,7 @@ class Person:
                 self.say(f"• {task}...")
                 time.sleep(delay)
             self.say(f"{self.profile.name} has completed all the tasks.")
-
+    
     @staticmethod
     def choose(iterable: Sequence[Any]) -> Any:
         """Choose and return a random element from the given sequence.
@@ -302,3 +302,47 @@ class Person:
             IndexError: If the sequence is empty.
         """
         return random.choice(iterable)
+    
+    @staticmethod
+    def compliment(target: Person) -> str:
+        """Return a random compliment addressed to another person.
+
+        Args:
+            target (Person): The person receiving the compliment.
+
+        Returns:
+            str: A compliment message including the target's name.
+
+        Raises:
+            TypeError: If target is not a Person instance.
+            ValueError: If target has no name set.
+        """
+
+        if not isinstance(target, Person):
+            raise TypeError(
+                f"'target' must be a Person, got {type(target).__name__}"
+            )
+
+        if target.profile.name is None:
+            raise ValueError(
+                "'target' must have a name to receive a compliment"
+            )
+
+        compliments = [
+            "{name}, I brag to all my friends about you.",
+            "{name}, you are more fun than anyone I know.",
+            "{name}, you just made my day.",
+            "{name}, you are one of the strongest people I know.",
+            "{name}, you look great today.",
+            "{name}, you have the best smile.",
+            "{name}, your outlook on life is amazing.",
+            "{name}, you light up the room.",
+            "{name}, you make a bigger impact than you realize.",
+            "{name}, you are always so helpful.",
+            "{name}, you are so sweet.",
+        ]
+
+        return random.choice(compliments).format(
+            name=target.profile.name
+        )
+        
